@@ -1,0 +1,18 @@
+.input-field{
+    display: flex;
+    flex-direction: column;
+    gap:1.5vh;
+}
+
+.input-field>*{
+    height: 4vh;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+.add-btn{
+    background-color: #55468c;
+    color:#fff;
+    font-size: 1.2rem;
+}
