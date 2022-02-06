@@ -17,7 +17,7 @@ function Todos() {
         `https://lit-sierra-62610.herokuapp.com/tasks?_page=${page}&_limit=3`
       )
       .then((res) => {
-        myRef.current=res.headers[`x-total-count`];
+        myRef.current = res.headers[`x-total-count`];
         setTodos(res.data);
       });
   }
@@ -26,7 +26,6 @@ function Todos() {
       method: "DELETE",
     }).then(getData);
   }
-  
 
   return (
     <>
@@ -45,13 +44,17 @@ function Todos() {
             </button>
             <button
               className="next-btn"
-              style={{ display: page > Math.ceil(myRef.current/3)-1 ? "none" : "inline" }}
+              style={{
+                display:
+                  page > Math.ceil(myRef.current / 3) - 1 ? "none" : "inline",
+              }}
               onClick={() => setPage(page + 1)}
             >
               Next
             </button>
           </div>
         </div>
+        <p className="page-no">Page - {page}</p>
       </div>
     </>
   );

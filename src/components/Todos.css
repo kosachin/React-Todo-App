@@ -22,6 +22,10 @@
 .next-btn{
     background-color: #8c4;
 }
+.page-no{
+
+  text-align: center;
+}
 
 @media (0<= width <= 480px) {
   .controlBtn{
